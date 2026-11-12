@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>關西七日・紅葉紀行</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&display=swap">
+<style>
+:root{--bg:#f3eadb;--card:#fffaf1;--ink:#3a2d27;--sub:#85726a;--line:#e6d6bf;--red:#a82f2a;--org:#cf7a2e;--moss:#66763f;--soft:#f5e3cf;--sh:0 4px 14px rgba(110,60,30,.09);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1512;--card:#2a201b;--ink:#f2e7d8;--sub:#b5a392;--line:#43352d;--red:#e0705f;--org:#e8a257;--moss:#a3b47b;--soft:#392a22;--sh:0 4px 14px rgba(0,0,0,.35);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c1512;--card:#2a201b;--ink:#f2e7d8;--sub:#b5a392;--line:#43352d;--red:#e0705f;--org:#e8a257;--moss:#a3b47b;--soft:#392a22;--sh:0 4px 14px rgba(0,0,0,.35);color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+*{box-sizing:inherit;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 -apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.w{max-width:560px;margin:0 auto}
+.hero{position:relative;overflow:hidden;margin:12px 14px 0;border-radius:6px 26px 6px 26px;padding:22px 20px 18px;color:#fff;background:radial-gradient(circle at 86% 30%,rgba(255,236,200,.95) 0 38px,transparent 39px),radial-gradient(circle at 20% 120%,rgba(240,180,70,.45) 0 120px,transparent 121px),linear-gradient(160deg,#8f2420,#b8402c 55%,#d4822f)}
+.hero .vt{position:absolute;right:26px;top:18px;writing-mode:vertical-rl;font:700 34px/1.2 "Noto Serif TC","Songti TC",serif;letter-spacing:.25em;color:#8f2420;mix-blend-mode:normal}
+.hero h1{font:700 26px/1.3 "Noto Serif TC","Songti TC",serif;margin:0 0 6px;letter-spacing:.06em;max-width:11em}
+.hero p{margin:0;font-size:13px;opacity:.92}
+.cd{display:inline-block;background:rgba(255,255,255,.2);border-radius:99px;padding:3px 12px;font-size:13px;margin-top:12px}
+.bar{height:5px;border-radius:9px;background:rgba(255,255,255,.28);margin-top:16px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:#ffe9b8;border-radius:9px;transition:width .4s}
+#pt{font-size:12px;margin-top:6px;opacity:.9}
+#tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;gap:8px;overflow-x:auto;padding:12px 14px;background:var(--bg);scrollbar-width:none}
+#tabs::-webkit-scrollbar{display:none}
+.pill{flex:none;min-width:58px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:4px 14px 4px 14px;padding:6px 10px;text-align:center;font:inherit;cursor:pointer;line-height:1.2}
+.pill b{display:block;font:700 20px/1.1 "Noto Serif TC",serif}
+.pill span{font-size:11px;color:var(--sub)}
+.pill.on{background:var(--red);border-color:var(--red);color:#fff}
+.pill.on span{color:#ffe3d0}
+main{padding:2px 14px 32px}
+.dh{margin:4px 0 12px}
+.dh small{color:var(--red);font-weight:700;letter-spacing:.08em}
+.dh h2{font:700 23px/1.35 "Noto Serif TC","Songti TC",serif;margin:2px 0 4px}
+.dh p{margin:0;color:var(--sub);font-size:13px}
+.ht{font-size:12px;color:var(--sub);margin:0 0 12px}
+.seg{display:flex;background:var(--soft);border-radius:12px;padding:3px;margin-bottom:8px}
+.seg button{flex:1;border:0;background:none;color:var(--sub);font:inherit;padding:9px;border-radius:10px;cursor:pointer}
+.seg .on{background:var(--card);color:var(--red);font-weight:700;box-shadow:var(--sh)}
+.pn{margin:0 0 12px;font-size:13px;color:var(--sub);background:var(--card);border-left:3px solid var(--org);padding:8px 12px;border-radius:0 10px 10px 0}
+.tl{list-style:none;margin:0;padding:0}
+.st{display:grid;grid-template-columns:32px 1fr auto;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:4px 16px 4px 16px;padding:11px 12px;margin:0 0 10px;box-shadow:var(--sh)}
+.ck{width:30px;height:30px;border-radius:50%;border:2px solid var(--org);background:transparent;color:transparent;font-size:15px;cursor:pointer;padding:0;display:grid;place-items:center}
+.ok .ck{background:var(--moss);border-color:var(--moss);color:#fff}
+.ok h3{text-decoration:line-through;opacity:.5}
+.ok p{opacity:.5}
+.tm{font-size:12px;color:var(--red);font-weight:700}
+.st h3{margin:0;font-size:16px;line-height:1.4}
+.st p{margin:2px 0 0;color:var(--sub);font-size:13px;line-height:1.5}
+.mp{font-size:12px;color:var(--red);border:1px solid var(--red);border-radius:99px;padding:4px 11px;text-decoration:none;white-space:nowrap}
+.al{background:var(--soft);border-radius:16px;padding:13px 14px 5px;margin:16px 0}
+.al h4{margin:0 0 9px;font-size:14px;color:var(--red)}
+.chip{display:inline-flex;margin:0 6px 8px 0;border:1px solid var(--org);border-radius:99px;overflow:hidden;background:var(--card)}
+.chip button{border:0;background:none;color:var(--ink);font:inherit;font-size:13px;padding:7px 8px 7px 13px;cursor:pointer}
+.chip a{padding:7px 12px 7px 4px;text-decoration:none;font-size:13px}
+.chip.on{background:var(--org)}
+.chip.on button{color:#fff;font-weight:700}
+.nv{display:flex;gap:10px;margin-top:20px}
+.nv button{flex:1;padding:13px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;cursor:pointer}
+.nv .nx{background:var(--red);border-color:var(--red);color:#fff}
+.rs{display:block;margin:18px auto 0;background:none;border:0;color:var(--sub);font:inherit;font-size:12px;text-decoration:underline;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:2px solid var(--org);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="w">
+<header class="hero">
+<span class="vt">紅葉紀行</span>
+<h1>關西七天六夜</h1>
+<p>神戶・京都・奈良・大阪<br>2026 年 12 月 4 日至 10 日</p>
+<span class="cd" id="cd"></span>
+<div class="bar"><i id="pg"></i></div>
+<div id="pt"></div>
+</header>
+<nav id="tabs" aria-label="選擇日期"></nav>
+<main id="day"></main>
+</div>
+<script>
+const D=[
+{n:1,dt:'12/4 五',c:'京都',t:'關西入境，神戶轉往京都',r:'神戶機場 ➔ 三宮 ➔ 京都站',s:[
+['12:45','神戶機場出發','搭 Port Liner 約 18 分鐘至 JR 三宮站','神戶機場'],
+['','三宮站 ➔ 京都站','JR 神戶新快速約 1 小時','三宮站'],
+['','京都站 Check in','放下行李，稍作休息','京都站'],
+['','晚餐','備選見下方'],
+['夜','東寺夜楓','距京都車站步行約 10 分鐘','東寺']],
+a:[['晚餐備選',['拉麵','東洋亭（百年漢堡排）']]]},
+{n:2,dt:'12/5 六',c:'京都',t:'嵐山鐵道遊船，河原町逛街',r:'京都站 ➔ 嵐山 ➔ 河原町',s:[
+['','京都站 ➔ 嵐山','JR 嵯峨野線約 20 分鐘，下車步行至小火車站','嵐山站'],
+['09:02','嵯峨野觀光小火車','1 號 09:02 或 3 號 10:02，¥880','嵯峨野トロッコ嵐山駅'],
+['11:00','保津川遊船','接駁巴士約 15 分鐘，再步行 2 分鐘','保津川下り'],
+['','嵐山午餐','備選見下方'],
+['','河原町逛街','','河原町'],
+['','晚餐','備選見下方']],
+a:[['午餐備選',['鯛匠 HANANA','廣川鰻魚飯','よしむら蕎麥麵','湯豆腐 京料理「昭」'],'嵐山'],['晚餐備選',['おきやす','炙り燒']]]},
+{n:3,dt:'12/6 日',c:'京都',t:'清水寺和服漫步與祇園',r:'清水寺 ➔ 祇園',p:[['方案一','飯店（Henn na）➔ 和服體驗 ➔ 清水寺'],['方案二','京都 ➔ 步行 5 分鐘至伏見 ➔ 步行約 7 分鐘至清水寺，之後同方案一（晚餐前去伏見）']],s:[
+['','和服體驗','','清水寺 和服'],
+['','清水寺','','清水寺'],
+['','二、三年坂','','二年坂'],
+['','午餐','備選見下方'],
+['','花見（和服）＋川阪','','花見小路'],
+['','晚餐','備選見下方']],
+a:[['午餐備選',['親子丼']],['晚餐備選',['すき焼き 包久','壽喜燒料理']]]},
+{n:4,dt:'12/7 一',c:'大阪',t:'奈良古都巡禮，移動大阪難波',r:'京都站 ➔ 奈良 ➔ 難波 ➔ 道頓堀',s:[
+['','京都站 ➔ 奈良','JR 奈良線みやこ路快速約 45 分鐘','奈良站'],
+['','東大寺 ＋ 冰室','','東大寺'],
+['','午餐','備選見下方'],
+['','春日','','春日大社'],
+['','商店街','買紀念品','東向商店街'],
+['','近鐵 ➔ 難波','快速急行 ➔ 近鐵道頓堀 ➔ 難波（2 分鐘，紅線）','大阪難波站'],
+['','難波 Check in','','難波站'],
+['','道頓堀','晚餐備選見下方','道頓堀']],
+a:[['午餐備選',['元喜神沾麵','釜飯 公園店'],'奈良'],['晚餐備選',['大阪燒','鳥貴族','壽喜燒']]]},
+{n:5,dt:'12/8 二',c:'梅田',t:'市區秋景賞楓，梅田逛街',r:'難波 ➔ 梅田',s:[
+['','難波（Henn na）出發','','難波'],
+['','紅葉景點散步','市區秋景賞楓'],
+['','梅田','','梅田站'],
+['','午餐','備選見下方'],
+['','下午茶：HARBS','水果蛋糕','HARBS 梅田'],
+['','梅田逛街','','梅田'],
+['','晚餐','梅田商圈餐廳，依喜好挑選']],
+a:[['午餐備選',['Shake Shack（阪神百貨店）']]]},
+{n:6,dt:'12/9 三',c:'大阪',t:'勝尾寺祈願，大阪地標巡禮',r:'箕面 ➔ 梅田 ➔ 大阪城 ➔ 通天閣',s:[
+['','難波 ➔ 勝尾寺','御堂筋線約 20 分鐘','勝尾寺'],
+['','勝尾寺祈願','','勝尾寺'],
+['','箕面營業所','約 15 分鐘','箕面'],
+['','梅田午餐','','梅田'],
+['','大阪城','御堂筋線＋中央線約 20 分鐘','大阪城'],
+['','通天閣','約 20 分鐘','通天閣'],
+['','箕面溫泉','','箕面溫泉'],
+['','晚餐','道頓堀或市區特色美食']],
+a:[['下午備選方案',['箕面瀑布','通天閣（午）','道頓堀商圈（晚）']]]},
+{n:7,dt:'12/10 四',c:'神戶',t:'北野異人館，神戶港夜景',r:'難波 ➔ 梅田 ➔ 三宮 ➔ 神戶港',s:[
+['','難波（Henn na）出發','','難波'],
+['','梅田午餐','依當日心情挑選','梅田'],
+['','三宮 Check in','寄放行李','三宮站'],
+['','北野異人館','走路爬坡約 20 分鐘','北野異人館'],
+['','南京町','走路約 10 分鐘，神戶中國城小吃','南京町'],
+['','神戶塔＋港灣散步','','神戶塔'],
+['','晚餐','備選見下方']],
+a:[['晚餐備選',['神戶港灣景觀餐廳','神戶牛料理']]]}
+];
+const $=s=>document.querySelector(s);
+let cur=0,S={done:{},pick:{},plan:{}};
+try{Object.assign(S,JSON.parse(localStorage.getItem('kx')||'{}'))}catch(e){}
+const sv=()=>{try{localStorage.setItem('kx',JSON.stringify(S))}catch(e){}};
+const N=new Date(),k=Math.round((new Date(N.getFullYear(),N.getMonth(),N.getDate())-new Date(2026,11,4))/864e5);
+if(k>=0&&k<7)cur=k;
+const tot=D.reduce((a,x)=>a+x.s.length,0);
+const L=(q,c,t)=>q?`<a class="${c}" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(q)}">${t}</a>`:'';
+function head(){
+ const dn=Object.keys(S.done).length;
+ $('#cd').textContent=k<0?`距出發還有 ${-k} 天`:k<7?`旅行中，第 ${k+1} 天`:'旅程結束，期待下次出發';
+ $('#pg').style.width=(dn/tot*100)+'%';
+ $('#pt').textContent=`行程進度 ${dn} / ${tot}`;
+}
+function render(go){
+ const x=D[cur],p=S.plan[x.n]||0;
+ $('#tabs').innerHTML=D.map((y,i)=>`<button class="pill${i==cur?' on':''}" data-i="${i}"><b>${y.n}</b><span>${y.dt}</span></button>`).join('');
+ let h=`<div class="dh"><small>第 ${x.n} 天　${x.dt}</small><h2>${x.t}</h2><p>${x.r}</p></div><p class="ht">點圓圈標記完成，點備選標記想去，點地圖開啟 Google 地圖。</p>`;
+ if(x.p)h+=`<div class="seg">${x.p.map((y,i)=>`<button data-p="${i}" class="${i==p?'on':''}">${y[0]}</button>`).join('')}</div><p class="pn">${x.p[p][1]}</p>`;
+ h+='<ul class="tl">'+x.s.map((s,i)=>{const key=x.n+'-'+i;return `<li class="st${S.done[key]?' ok':''}"><button class="ck" data-k="${key}" aria-label="標記完成">✓</button><div>${s[0]?`<span class="tm">${s[0]}</span>`:''}<h3>${s[1]}</h3>${s[2]?`<p>${s[2]}</p>`:''}</div>${L(s[3]&&(x.c+' '+s[3]),'mp','地圖')}</li>`}).join('')+'</ul>';
+ (x.a||[]).forEach((g,gi)=>{h+=`<div class="al"><h4>${g[0]}</h4>`+g[1].map((c,ci)=>{const key=x.n+'-'+gi+'-'+ci;return `<span class="chip${S.pick[key]?' on':''}"><button data-c="${key}">${c}</button>${L((g[2]||x.c)+' '+c.replace(/（.*）/,''),'pin','📍')}</span>`}).join('')+'</div>'});
+ h+=`<div class="nv">${cur>0?`<button data-go="-1">‹ 前一天</button>`:''}${cur<6?`<button class="nx" data-go="1">下一天 ›</button>`:''}</div><button class="rs" data-rs>重設勾選紀錄</button>`;
+ $('#day').innerHTML=h;
+ const t=$('#tabs'),a=$('.pill.on');t.scrollLeft=a.offsetLeft-t.clientWidth/2+a.clientWidth/2;
+ head();
+ if(go)$('.dh').scrollIntoView({behavior:'smooth',block:'start'});
+}
+document.addEventListener('click',e=>{
+ const b=e.target.closest('button');if(!b)return;const d=b.dataset;
+ if(d.i!=null){cur=+d.i;render(1)}
+ else if(d.k){S.done[d.k]?delete S.done[d.k]:S.done[d.k]=1;sv();render()}
+ else if(d.c){S.pick[d.c]?delete S.pick[d.c]:S.pick[d.c]=1;sv();render()}
+ else if(d.p!=null){S.plan[D[cur].n]=+d.p;sv();render()}
+ else if(d.go){cur+=+d.go;render(1)}
+ else if(d.rs!=null){if(d.arm){S.done={};S.pick={};sv();render()}else{b.dataset.arm=1;b.textContent='再點一次確認清除'}}
+});
+render();
+</script>
+</body>
+</html>
